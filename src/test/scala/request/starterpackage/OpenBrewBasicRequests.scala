@@ -7,9 +7,6 @@ import io.gatling.http.Predef._
 
  object OpenBrewBasicRequests {
 
-  // load properties
-  // create http protocol and feeder
-
   //describe requests
   val openBasicBrew = tryMax(2) {
     exec(http("All breweries")

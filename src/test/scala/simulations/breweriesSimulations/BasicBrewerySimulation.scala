@@ -7,19 +7,10 @@ import utils.Helpers
 import utils.PropertiesLoader._
 
 ///define simulation importing scenarios and http protocol from package object
-class BasicBrewerySimulation extends Simulation {
-
-  before {
-    println("Starting the simulation...")
-    Helpers.debugInfo()
-  }
+class BasicBrewerySimulation extends BaseSimulation {
 
   setUp(
     BasicBreweryScenarios.mainBreweryScenario.inject(
       constantUsersPerSec(users).during(duration))
       .protocols(httpProtocol))
-
-  after {
-    println("Simulation is finished!")
-  }
 }
